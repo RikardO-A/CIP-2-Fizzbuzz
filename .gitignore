@@ -8,3 +8,4 @@
 !FizzBuzz2/Fizzbuzz.Domain/**
 !FizzBuzz2/Fizzbuzz.Infrastructure/**
 !FizzBuzz2/Fizzbuzz.Tests/**
+!FizzBuzz2/Fizzbuzz.Presentation/**
