@@ -4,11 +4,7 @@
 # But not these files...
 !.gitignore
 !FizzBuzz2/
-!FizzBuzz2/Fizzbuzz.Application/
 !FizzBuzz2/Fizzbuzz.Application/**
-!FizzBuzz2/Fizzbuzz.Domain/
 !FizzBuzz2/Fizzbuzz.Domain/**
-!FizzBuzz2/Fizzbuzz.Infrastructure/
 !FizzBuzz2/Fizzbuzz.Infrastructure/**
-!FizzBuzz2/Fizzbuzz.Tests/
 !FizzBuzz2/Fizzbuzz.Tests/**
