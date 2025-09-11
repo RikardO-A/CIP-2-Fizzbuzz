@@ -16,15 +16,16 @@ namespace FizzBuzz.Application
 
             for (int i = start; i <= end; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (FizzBuzzPredicates.IsFizz(i) && FizzBuzzPredicates.IsBuzz(i))
                     result.Results.Add("FizzBuzz");
-                else if (i % 3 == 0)
+                else if (FizzBuzzPredicates.IsFizz(i))
                     result.Results.Add("Fizz");
-                else if (i % 5 == 0)
+                else if (FizzBuzzPredicates.IsBuzz(i))
                     result.Results.Add("Buzz");
                 else
                     result.Results.Add(i.ToString());
             }
+
             return result;
         }
     }
