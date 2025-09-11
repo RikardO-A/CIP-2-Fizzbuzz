@@ -14,3 +14,10 @@
 !FizzBuzz2/Fizzbuzz.Infrastructure/**
 !FizzBuzz2/Fizzbuzz.Tests/
 !FizzBuzz2/Fizzbuzz.Tests/**
+
+FizzBuzz2/**/bin/
+FizzBuzz2/**/obj/
+FizzBuzz2/**/.vs/
+FizzBuzz2/**/.vscode/
+FizzBuzz2/**/.DS_Store
+FizzBuzz2/**/Thumbs.db

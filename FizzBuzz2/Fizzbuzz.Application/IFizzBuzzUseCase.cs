@@ -1,18 +1,9 @@
-namespace FizzBuzz.Application;
+using System.Collections.Generic;
 
-GenerateFizzBuzz(int start, int end)
+namespace FizzBuzz.Application
 {
-    List<string> results = new List<string>();
-    for (int i = start; i <= end; i++)
+    public interface IFizzBuzzUseCase
     {
-        if (i % 3 == 0 && i % 5 == 0)
-            results.Add("FizzBuzz");
-        else if (i % 3 == 0)
-            results.Add("Fizz");
-        else if (i % 5 == 0)
-            results.Add("Buzz");
-        else
-            results.Add(i.ToString());
+        List<string> GenerateFizzBuzz(int start, int end);
     }
-    return results;
 }
