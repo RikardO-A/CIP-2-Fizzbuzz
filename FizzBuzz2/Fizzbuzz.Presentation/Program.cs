@@ -1,17 +1,19 @@
 ﻿using System.Collections.Generic;
 using FizzBuzz.Application;
+using FizzBuzz.Domain;
 
-
-class Program
+Console.WriteLine("Enter an integer (Between 1 to 10^5)");
+int input = int.Parse(Console.ReadLine());
+if (input < 1 || input > 100000)
 {
-    static void Main(string[] args)
-    {
-        //Interface -> Implementation -> Use Case -> Result -> Presentation
-        IFizzBuzzUseCase fizzBuzzUseCase = new FizzBuzzUseCase();
-        var fizzBuzzResult = fizzBuzzUseCase.GenerateFizzBuzz(1, 100);
-        foreach (var result in fizzBuzzResult.Results)
-        {
-            Console.WriteLine(result);
-        }
-    }
+    Console.WriteLine("Input must be between 1 and 10^5");
+    return;
 }
+
+Console.WriteLine("FizzBuzz Start:");
+IFizzBuzzService fizzBuzzService = new FizzBuzzService();
+var fizzBuzzResult = fizzBuzzService.GenerateFizzBuzz(1, input);
+
+Console.WriteLine("Fizz: " + fizzBuzzResult.FizzCount);
+Console.WriteLine("Buzz: " + fizzBuzzResult.BuzzCount);
+Console.WriteLine("FizzBuzz: " + fizzBuzzResult.FizzBuzzCount);
