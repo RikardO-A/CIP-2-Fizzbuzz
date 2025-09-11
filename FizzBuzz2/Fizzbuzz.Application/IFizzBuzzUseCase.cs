@@ -1,9 +1,9 @@
-using System.Collections.Generic;
+using FizzBuzz.Domain;
 
 namespace FizzBuzz.Application
 {
     public interface IFizzBuzzUseCase
     {
-        List<string> GenerateFizzBuzz(int start, int end);
+        FizzbuzzResult GenerateFizzBuzz(int start, int end);
     }
 }

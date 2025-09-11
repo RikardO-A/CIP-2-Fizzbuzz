@@ -1,24 +1,31 @@
 using System.Collections.Generic;
+using FizzBuzz.Domain;
 
 namespace FizzBuzz.Application
 {
     public class FizzBuzzUseCase : IFizzBuzzUseCase
     {
-        public List<string> GenerateFizzBuzz(int start, int end)
+        public FizzbuzzResult GenerateFizzBuzz(int start, int end)
         {
-            List<string> results = new List<string>();
+            var result = new FizzbuzzResult
+            {
+                Start = start,
+                End = end,
+                Results = new List<string>()
+            };
+
             for (int i = start; i <= end; i++)
             {
                 if (i % 3 == 0 && i % 5 == 0)
-                    results.Add("FizzBuzz");
+                    result.Results.Add("FizzBuzz");
                 else if (i % 3 == 0)
-                    results.Add("Fizz");
+                    result.Results.Add("Fizz");
                 else if (i % 5 == 0)
-                    results.Add("Buzz");
+                    result.Results.Add("Buzz");
                 else
-                    results.Add(i.ToString());
+                    result.Results.Add(i.ToString());
             }
-            return results;
+            return result;
         }
     }
 }
