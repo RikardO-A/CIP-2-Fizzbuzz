@@ -17,14 +17,15 @@ public class FizzBuzzTests
     [Test]
     public void GenerateFizzBuzz_Range1To15_ReturnsCorrectSequence()
     {
-        // Arrange
+
         int start = 1;
         int end = 15;
 
-        // Act
+
         var result = _fizzBuzzService.GenerateFizzBuzz(start, end);
 
-        // Assert
+
+
         Assert.That(result.Results.Count, Is.EqualTo(15));
         Assert.That(result.Results[0], Is.EqualTo("1"));
         Assert.That(result.Results[2], Is.EqualTo("Fizz")); // 3
@@ -46,13 +47,11 @@ public class FizzBuzzTests
         Assert.That(result.FizzCount, Is.EqualTo(4)); // 3, 6, 9, 12
         Assert.That(result.BuzzCount, Is.EqualTo(2)); // 5, 10
         Assert.That(result.FizzBuzzCount, Is.EqualTo(1)); // 15
-        Assert.That(result.NumberCount, Is.EqualTo(8)); // 1, 2, 4, 7, 8, 11, 13, 14
     }
 
     [Test]
     public void FizzBuzzPredicates_IsFizz_ReturnsCorrectValue()
     {
-        // Test the domain predicates directly
         Assert.That(FizzBuzzPredicates.IsFizz(3), Is.True);
         Assert.That(FizzBuzzPredicates.IsFizz(6), Is.True);
         Assert.That(FizzBuzzPredicates.IsFizz(4), Is.False);

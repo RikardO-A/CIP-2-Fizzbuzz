@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using FizzBuzz.Domain;
 
+//Q:Skapade en statisk klass för minskad komplexitet, är detta rätt eller fel?
 namespace FizzBuzz.Domain
 {
     public static class FizzBuzzCalc
@@ -15,11 +16,13 @@ namespace FizzBuzz.Domain
                 FizzCount = 0,
                 BuzzCount = 0,
                 FizzBuzzCount = 0,
-                NumberCount = 0
+                TotalCount = 0,
+
             };
 
             for (int i = start; i <= end; i++)
             {
+
                 if (FizzBuzzPredicates.IsFizzBuzz(i))
                 {
                     result.Results.Add("FizzBuzz");
@@ -38,9 +41,9 @@ namespace FizzBuzz.Domain
                 else
                 {
                     result.Results.Add(i.ToString());
-                    result.NumberCount++;
                 }
             }
+            result.TotalCount = result.Results.Count;
 
             return result;
         }
