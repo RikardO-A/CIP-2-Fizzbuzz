@@ -3,4 +3,21 @@
 
 # But not these files...
 !.gitignore
-!FizzBuzz2\Program.cs
+!FizzBuzz2/
+!FizzBuzz2/Fizzbuzz.Presentation/
+!FizzBuzz2/Fizzbuzz.Presentation/**
+!FizzBuzz2/Fizzbuzz.Application/
+!FizzBuzz2/Fizzbuzz.Application/**
+!FizzBuzz2/Fizzbuzz.Domain/
+!FizzBuzz2/Fizzbuzz.Domain/**
+!FizzBuzz2/Fizzbuzz.Infrastructure/
+!FizzBuzz2/Fizzbuzz.Infrastructure/**
+!FizzBuzz2/Fizzbuzz.Tests/
+!FizzBuzz2/Fizzbuzz.Tests/**
+
+FizzBuzz2/**/bin/
+FizzBuzz2/**/obj/
+FizzBuzz2/**/.vs/
+FizzBuzz2/**/.vscode/
+FizzBuzz2/**/.DS_Store
+FizzBuzz2/**/Thumbs.db
