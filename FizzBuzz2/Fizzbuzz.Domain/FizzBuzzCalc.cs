@@ -6,7 +6,7 @@ namespace FizzBuzz.Domain
 {
     public static class FizzBuzzCalc
     {
-        public static FizzbuzzResult GenerateFizzBuzz(int start, int end)
+        public static FizzbuzzResult GenerateFizzBuzz(long start, long end)
         {
             var result = new FizzbuzzResult
             {
@@ -20,7 +20,7 @@ namespace FizzBuzz.Domain
 
             };
 
-            for (int i = start; i <= end; i++)
+            for (long i = start; i <= end; i++)
             {
 
                 if (FizzBuzzPredicates.IsFizzBuzz(i))

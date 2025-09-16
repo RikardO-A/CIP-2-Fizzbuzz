@@ -2,11 +2,11 @@
 using FizzBuzz.Application;
 using FizzBuzz.Domain;
 
-Console.WriteLine("Enter an integer (Between 1 to 10^5)");
-int input = int.Parse(Console.ReadLine());
-if (input < 1 || input > 100000)
+Console.WriteLine("Enter an integer (Between 1 to 10^15)");
+long input = long.Parse(Console.ReadLine());
+if (input < 1 || input > 1000000000000000)
 {
-    Console.WriteLine("Input must be between 1 and 10^5");
+    Console.WriteLine("Input must be between 1 and 10^15");
     return;
 }
 

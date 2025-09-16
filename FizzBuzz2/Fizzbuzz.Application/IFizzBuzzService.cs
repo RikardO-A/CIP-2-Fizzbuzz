@@ -4,6 +4,6 @@ namespace FizzBuzz.Application
 {
     public interface IFizzBuzzService
     {
-        FizzbuzzResult GenerateFizzBuzz(int start, int end);
+        FizzbuzzResult GenerateFizzBuzz(long start, long end);
     }
 }
